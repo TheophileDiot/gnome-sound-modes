@@ -1,0 +1,29 @@
+tests/test-matching.js
+  s_4605296e4999ad::t_451a7d9b4b808e 120-126
+README.md
+  s_4605296e4999ad::t_53cb0d278c2fed 15-16
+ui/prefs/devicesPage.js
+  s_4605296e4999ad::t_451a7d9b4b808e 39
+lib/matching.js
+  s_4605296e4999ad::t_451a7d9b4b808e 238-239,247-257
+ui/prefs/modesPage.js
+  s_4605296e4999ad::t_451a7d9b4b808e 236
+docs/ego-checklist.md
+  s_4605296e4999ad::t_53cb0d278c2fed 87-88
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "a0337fab7a78e2c8e1154ccbc9d54d5445177939",
+  "prompts": {},
+  "sessions": {
+    "s_4605296e4999ad": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "d1c790c5-a59f-4454-8f16-6735f9ac5d1a",
+        "model": "claude-fable-5-1"
+      },
+      "human_author": "TheophileDiot <tdiot@bunkerity.com>"
+    }
+  }
+}
