@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemalist gettext-domain="sound-modes">
+  <schema id="org.gnome.shell.extensions.sound-modes" path="/org/gnome/shell/extensions/sound-modes/">
+    <key name="modes" type="s">
+      <default>'[]'</default>
+      <summary>Saved modes</summary>
+      <description>JSON array of mode objects. Edited through the preferences window.</description>
+    </key>
+    <key name="active-mode" type="s">
+      <default>''</default>
+      <summary>Identifier of the active mode</summary>
+      <description>Empty when no mode is active (custom setup).</description>
+    </key>
+    <key name="call-app-overrides" type="a{ss}">
+      <default>{}</default>
+      <summary>Call detection overrides</summary>
+      <description>Map of application key to "always" or "never".</description>
+    </key>
+    <key name="call-app-names" type="a{ss}">
+      <default>{}</default>
+      <summary>Display names for call detection overrides</summary>
+      <description>Map of application key to its last seen display name.</description>
+    </key>
+    <key name="call-mode" type="s">
+      <default>''</default>
+      <summary>Mode to apply when a call starts</summary>
+      <description>Empty disables automatic switching. The previous mode is restored when the call ends.</description>
+    </key>
+    <key name="reapply-on-reconnect" type="b">
+      <default>true</default>
+      <summary>Re-apply the active mode when its devices reappear</summary>
+    </key>
+    <key name="show-indicator" type="b">
+      <default>true</default>
+      <summary>Show a button in the top bar</summary>
+    </key>
+    <key name="debug" type="b">
+      <default>false</default>
+      <summary>Verbose logging to the journal</summary>
+    </key>
+  </schema>
+</schemalist>

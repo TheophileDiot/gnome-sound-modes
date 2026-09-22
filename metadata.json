@@ -1,0 +1,10 @@
+{
+  "name": "Sound Modes",
+  "description": "Save a complete audio setup as a mode and switch it in one click from Quick Settings.\n\nA mode combines an output device, an input device, a Bluetooth profile or codec, EasyEffects presets and call-only routing. Devices are discovered automatically and matched on stable properties, so modes survive reconnects, replugs and suspend. PipeWire and WirePlumber are required; EasyEffects is optional.",
+  "uuid": "sound-modes@theophilediot.github.io",
+  "settings-schema": "org.gnome.shell.extensions.sound-modes",
+  "gettext-domain": "sound-modes",
+  "url": "https://github.com/TheophileDiot/gnome-sound-modes",
+  "version-name": "0.1.0",
+  "shell-version": ["46", "47", "48", "49", "50", "51"]
+}

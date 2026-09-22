@@ -1,0 +1,48 @@
+.sound-modes-panel-menu,
+.sound-modes-menu {
+    max-width: 28em;
+}
+
+.sound-modes-label {
+    max-width: 24em;
+}
+
+.sound-modes-header {
+    spacing: 12px;
+}
+
+.sound-modes-title {
+    font-weight: bold;
+}
+
+.sound-modes-status-block {
+    spacing: 6px;
+    padding: 8px;
+    border-radius: 8px;
+    border: 1px solid rgba(128, 128, 128, 0.25);
+}
+
+.sound-modes-status-row {
+    spacing: 8px;
+}
+
+.sound-modes-detail {
+    max-width: 10em;
+    text-align: right;
+}
+
+.sound-modes-dim {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.sound-modes-call-pill {
+    max-width: 8em;
+    padding: 3px 8px;
+    border-radius: 12px;
+    background-color: rgba(128, 128, 128, 0.2);
+    font-size: 0.85em;
+}
+
+.sound-modes-error {
+    font-weight: bold;
+}
