@@ -1,0 +1,20 @@
+README.md
+  s_4605296e4999ad::t_f2391c22cd759d 15-18,42
+  s_4605296e4999ad::t_3baa6adeef1b4d 43
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "efb51ca7e271c56a446ef0cd8b48207d09a0a473",
+  "prompts": {},
+  "sessions": {
+    "s_4605296e4999ad": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "d1c790c5-a59f-4454-8f16-6735f9ac5d1a",
+        "model": "claude-fable-5-1"
+      },
+      "human_author": "TheophileDiot <tdiot@bunkerity.com>"
+    }
+  }
+}
