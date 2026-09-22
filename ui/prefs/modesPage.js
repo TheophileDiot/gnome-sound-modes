@@ -233,7 +233,7 @@ export function modesPage(ctx) {
             const profile = output.device?.profiles.find(profile => profile.name === mode.output?.profile);
             const values = [
                 [output.name, output.missing, _('Output:') + ' ' + output.name],
-                [profile ? profileLabel(profile) : mode.output?.profile, false, null],
+                [profile ? profileLabel(profile) : profileLabel(mode.output?.profile ?? ''), false, null],
                 [input.name, input.missing, _('Input:') + ' ' + input.name],
                 [mode.effects.enabled ? (mode.effects.scope === 'calls' ? _('Call effects') : _('All effects')) : _('Effects off'), false, null],
             ].filter(([text]) => text);

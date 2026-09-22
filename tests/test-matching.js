@@ -117,4 +117,11 @@ assert(hdmiOutputs.every(p => p.available !== 'no'), 'unavailable profiles are e
     assert(ldac && !ldac.exact && ldac.profile.name.startsWith('a2dp-sink'), 'missing codec falls back to same family');
     assert(resolveProfile(card, 'output:hdmi-stereo') === null, 'unknown family resolves to null');
 }
+{
+    const {profileLabel} = await import('../lib/matching.js');
+    assert(profileLabel('a2dp-sink-ldac') === 'A2DP · LDAC', 'label from name: ldac');
+    assert(profileLabel({name: 'headset-head-unit-msbc'}) === 'Headset (HFP) · MSBC', 'label from name: msbc');
+    assert(profileLabel('a2dp-sink') === 'A2DP', 'label from bare family');
+    assert(profileLabel('output:analog-stereo') === 'output:analog-stereo', 'unknown name passes through');
+}
 print('test-matching: all checks passed');

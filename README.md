@@ -12,6 +12,8 @@ properties (serial number, Bluetooth address, USB vendor/product), not by whatev
 happens to show up in the menu that day, so a mode still works after a reboot, a replug,
 or a Bluetooth reconnect.
 
+![Modes page of the preferences window](docs/screenshots/prefs-modes.png)
+
 ## Features
 
 - **Output and input device selection**, matched on stable hardware identity rather than

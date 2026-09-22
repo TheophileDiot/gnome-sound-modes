@@ -84,8 +84,8 @@ extensions.gnome.org (EGO). Go through this before every upload.
       --schema=schemas/org.gnome.shell.extensions.sound-modes.gschema.xml
       --extra-source=lib --extra-source=ui --extra-source=icons --extra-source=LICENSE .`,
       per the `Makefile`'s `pack` target — it runs `make test` first).
-- [ ] Unzip it somewhere and sanity-check the contents: compiled schema
-      (`gschemas.compiled`), `lib/`, `ui/`, `icons/`, `LICENSE`, plus `metadata.json`,
+- [ ] Unzip it somewhere and sanity-check the contents: the schema XML (the compiled
+      `gschemas.compiled` is produced at install time, not by `pack`), `lib/`, `ui/`, `icons/`, `LICENSE`, plus `metadata.json`,
       `extension.js`, `prefs.js`, `stylesheet.css` at the root. No `tests/`, no `.git`,
       no `dist/` inside itself.
 - [ ] Install the freshly packed zip (`gnome-extensions install --force

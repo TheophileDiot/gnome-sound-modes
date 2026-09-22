@@ -36,7 +36,7 @@ export function devicesPage(ctx) {
             group.remove(row);
         rows = [];
         connected.description = snapshot.devices.length ? null : _('No devices found.');
-        for (const device of snapshot.devices) {
+        for (const device of snapshot.devices.filter(item => item.api === 'alsa' || item.api === 'bluez5')) {
             const kind = classifyDevice(device);
             const active = device.profiles.find(profile => profile.name === device.activeProfile);
             const row = new Adw.ExpanderRow({
