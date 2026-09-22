@@ -12,7 +12,10 @@ properties (serial number, Bluetooth address, USB vendor/product), not by whatev
 happens to show up in the menu that day, so a mode still works after a reboot, a replug,
 or a Bluetooth reconnect.
 
-![Modes page of the preferences window](docs/screenshots/prefs-modes.png)
+<p align="center">
+  <img src="docs/screenshots/panel-menu.png" alt="Sound Modes menu in the top bar" width="450">
+  <img src="docs/screenshots/quick-settings.png" alt="Sound Modes in Quick Settings" width="300">
+</p>
 
 ## Features
 
@@ -35,6 +38,8 @@ or a Bluetooth reconnect.
   the preferences window's Advanced page.
 - **Custom symbolic icons** for headphones, speakers, microphones, earbuds, headsets, and
   the various status states, instead of reusing generic Adwaita icons for everything.
+
+![Modes page of the preferences window](docs/screenshots/prefs-modes.png)
 
 ## Requirements
 
