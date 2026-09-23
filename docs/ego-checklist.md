@@ -13,7 +13,7 @@ extensions.gnome.org (EGO). Go through this before every upload.
 - [ ] `gettext-domain` (`sound-modes`) matches what `extension.gettext`/`ngettext` are
       bound to in `ui/indicator.js`, `ui/panelButton.js`, and the prefs pages.
 - [ ] `shell-version` lists only shell versions actually tested on this cycle. Currently
-      `["46", "47", "48", "49", "50", "51"]` — trim or extend based on what you verified,
+      `["46", "47", "48", "49", "50"]` — trim or extend based on what you verified,
       not what you assume still works.
 - [ ] `description` reads as plain, factual English (what it does, what it needs), no
       marketing language, no emoji. EGO reviewers reject listings that read as ad copy.
