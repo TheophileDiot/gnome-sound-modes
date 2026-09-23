@@ -1,0 +1,21 @@
+metadata.json
+  s_9f245fac5175f9::t_6cc81e3238f65b 9
+docs/ego-checklist.md
+  s_9f245fac5175f9::t_6cc81e3238f65b 16
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "07a65a1c528afad0c4fd1567f4c0faa2b30e320c",
+  "prompts": {},
+  "sessions": {
+    "s_9f245fac5175f9": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "09796e8b-3b71-4c12-9b8e-654d42a86174",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "TheophileDiot <tdiot@bunkerity.com>"
+    }
+  }
+}
