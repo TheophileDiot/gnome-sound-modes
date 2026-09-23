@@ -5,6 +5,6 @@
   "settings-schema": "org.gnome.shell.extensions.sound-modes",
   "gettext-domain": "sound-modes",
   "url": "https://github.com/TheophileDiot/gnome-sound-modes",
-  "version-name": "0.1.0",
+  "version-name": "0.1.1",
   "shell-version": ["46", "47", "48", "49", "50"]
 }
