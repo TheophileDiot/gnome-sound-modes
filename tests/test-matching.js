@@ -124,4 +124,12 @@ assert(hdmiOutputs.every(p => p.available !== 'no'), 'unavailable profiles are e
     assert(profileLabel('a2dp-sink') === 'A2DP', 'label from bare family');
     assert(profileLabel('output:analog-stereo') === 'output:analog-stereo', 'unknown name passes through');
 }
+{
+    const [, lb] = Gio.File.new_for_path(`${here}/fixtures/pw-dump-pipewire16-bluez-loopback.json`).load_contents(null);
+    const snap = parseSnapshot(JSON.parse(new TextDecoder().decode(lb)));
+    const card = snap.devices.find(d => d.api === 'bluez5');
+    const hit = resolveEndpoint({match: captureMatch(card), profile: 'a2dp-sink-ldac'}, 'output', snap);
+    assert(hit.endpoint.name === 'bluez_output.AA:BB:CC:DD:EE:01', 'profile slot resolves to the loopback sink, not the internal node');
+    assert(endpointLabel(hit.endpoint).endsWith('LDAC'), 'loopback sink label carries the codec');
+}
 print('test-matching: all checks passed');

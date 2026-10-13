@@ -48,6 +48,22 @@ assert(discordIn.target === 'easyeffects_source', 'target.node id resolved to no
 const sd = snapshot.streams.find(s => s.appName === 'speech-dispatcher-dummy');
 assert(sd.target === null, 'untargeted stream');
 
+// PipeWire 1.6 fronts each bluez node with a loopback node: the public one is
+// what users and the defaults see, the `Audio/Sink/Internal` one is the device.
+{
+    const [, lb] = Gio.File.new_for_path(`${here}/fixtures/pw-dump-pipewire16-bluez-loopback.json`).load_contents(null);
+    const snap = parseSnapshot(JSON.parse(new TextDecoder().decode(lb)));
+    const internal = snap.endpoints.find(e => e.name === 'bluez_output.AA_BB_CC_DD_EE_01.1');
+    const loopSink = snap.endpoints.find(e => e.name === 'bluez_output.AA:BB:CC:DD:EE:01');
+    const loopSource = snap.endpoints.find(e => e.name === 'bluez_input.AA:BB:CC:DD:EE:01');
+    assert(internal.mediaClass === 'Audio/Sink/Internal' && internal.virtual, 'Audio/Sink/Internal is virtual');
+    assert(!loopSink.virtual && !loopSource.virtual, 'public loopback nodes are not virtual');
+    assert(loopSink.bluez && loopSink.bluez.profile === 'a2dp-sink' && loopSink.bluez.codec === 'ldac',
+        'loopback sink inherits profile and codec from the internal node');
+    assert(loopSource.bluez === null, 'no internal source to inherit from');
+    assert(snap.defaults.sink === loopSink.name, 'default sink is the loopback sink');
+}
+
 assert(parseSnapshot([]).devices.length === 0, 'empty dump');
 
 const raw = new TextDecoder().decode(bytes);

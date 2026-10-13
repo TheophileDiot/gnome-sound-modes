@@ -191,4 +191,14 @@ assert(evalMissing.state === 'missing', 'an unresolvable slot evaluates to missi
     assert(src && src.args.nodeName === null && src.args.deferred.direction === 'input', 'default-source deferred until the profile switch');
     assert(p.missing.length === 0, 'nothing reported missing');
 }
+// --- PipeWire 1.6 bluez loopback: default sink is the loopback node, no drift ---
+{
+    const [, lb] = Gio.File.new_for_path(`${here}/fixtures/pw-dump-pipewire16-bluez-loopback.json`).load_contents(null);
+    const snap = parseSnapshot(JSON.parse(new TextDecoder().decode(lb)));
+    const card = snap.devices.find(d => d.api === 'bluez5');
+    const mode = createMode({name: 'Classic', output: {match: captureMatch(card), profile: card.activeProfile}});
+    const result = evaluateMode(mode, snap, noEffectsCaps);
+    assert(!result.drift.includes('default-sink'), 'no default-sink drift when the loopback sink is the default');
+    assert(result.drift.length === 0 && result.state === 'ok', 'loopback snapshot evaluates to ok');
+}
 print('test-plan: all checks passed');
