@@ -1,0 +1,19 @@
+metadata.json
+  s_ce1b78917e427a::t_0af29db9e09bbd 8
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "9e1d7daa1dbb4b887b546ce2ded95a17aab0e349",
+  "prompts": {},
+  "sessions": {
+    "s_ce1b78917e427a": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "61d132bc-d180-4e62-9c60-b646f3a8abf6",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "TheophileDiot <tdiot@bunkerity.com>"
+    }
+  }
+}
