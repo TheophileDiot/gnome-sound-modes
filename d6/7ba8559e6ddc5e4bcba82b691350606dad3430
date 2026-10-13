@@ -1,0 +1,29 @@
+tests/test-snapshot.js
+  s_640f768ac66a9f::t_99fe7e38f378fe 51-66
+tests/test-plan.js
+  s_640f768ac66a9f::t_99fe7e38f378fe 194-203
+lib/snapshot.js
+  s_640f768ac66a9f::t_ea1efc7d084e94 139-140,216-224
+  s_640f768ac66a9f::t_b901f3cab4af66 225-226
+tests/fixtures/pw-dump-pipewire16-bluez-loopback.json
+  s_640f768ac66a9f::t_928f7857913534 1-67,69,71-1977
+  s_640f768ac66a9f::t_be78fbd8291d15 68,70
+tests/test-matching.js
+  s_640f768ac66a9f::t_99fe7e38f378fe 127-134
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "d67ba8559e6ddc5e4bcba82b691350606dad3430",
+  "prompts": {},
+  "sessions": {
+    "s_640f768ac66a9f": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "bbcca67e-51f4-43b8-a09c-53d8798cd726",
+        "model": "claude-sonnet-5-5"
+      },
+      "human_author": "TheophileDiot <tdiot@bunkerity.com>"
+    }
+  }
+}
