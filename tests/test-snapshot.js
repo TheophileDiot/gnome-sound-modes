@@ -48,6 +48,25 @@ assert(discordIn.target === 'easyeffects_source', 'target.node id resolved to no
 const sd = snapshot.streams.find(s => s.appName === 'speech-dispatcher-dummy');
 assert(sd.target === null, 'untargeted stream');
 
+// Only audio streams belong in the snapshot used for call detection and routing.
+{
+    const classes = [
+        'Stream/Output/Audio', 'Stream/Input/Audio',
+        'Stream/Output/Video', 'Stream/Input/Video',
+        'Stream/Output/Midi', 'Stream/Input/Midi',
+    ];
+    const mixed = parseSnapshot(classes.map((mediaClass, id) => ({
+        id,
+        type: 'PipeWire:Interface:Node',
+        info: {props: {'media.class': mediaClass}},
+    })));
+    assert(mixed.streams.length === 2, 'video and MIDI streams are excluded from audio routing');
+    assert(mixed.streams[0].mediaClass === 'Stream/Output/Audio' && mixed.streams[0].direction === 'output',
+        'audio playback is preserved');
+    assert(mixed.streams[1].mediaClass === 'Stream/Input/Audio' && mixed.streams[1].direction === 'input',
+        'audio capture is preserved');
+}
+
 // PipeWire 1.6 fronts each bluez node with a loopback node: the public one is
 // what users and the defaults see, the `Audio/Sink/Internal` one is the device.
 {
