@@ -1,0 +1,29 @@
+lib/snapshot.js
+  s_91bbf2da0675fc::t_63b572f7783625 148
+tests/test-snapshot.js
+  s_f7fc19cd945b13::t_f42c97e0cb04aa 51-69
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "2dbed2d9d120e30b755f6dc868b4610b3f421612",
+  "prompts": {},
+  "sessions": {
+    "s_91bbf2da0675fc": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "3423cc7c-bab7-4a16-8bad-84b9e0d2513e",
+        "model": "unknown"
+      },
+      "human_author": "TheophileDiot <tdiot@bunkerity.com>"
+    },
+    "s_f7fc19cd945b13": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a1458a-c2f7-7a53-8e68-64874fbba161",
+        "model": "gpt-6.1-sol"
+      },
+      "human_author": "TheophileDiot <tdiot@bunkerity.com>"
+    }
+  }
+}
